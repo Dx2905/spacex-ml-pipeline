@@ -1,0 +1,71 @@
+[2025-04-20T05:08:55.272+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: spacex_ml_training_pipeline.train_model manual__2025-04-20T05:08:54.228404+00:00 [queued]>
+[2025-04-20T05:08:55.277+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: spacex_ml_training_pipeline.train_model manual__2025-04-20T05:08:54.228404+00:00 [queued]>
+[2025-04-20T05:08:55.278+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2025-04-20T05:08:55.286+0000] {taskinstance.py:1380} INFO - Executing <Task(BashOperator): train_model> on 2025-04-20 05:08:54.228404+00:00
+[2025-04-20T05:08:55.291+0000] {standard_task_runner.py:57} INFO - Started process 201 to run task
+[2025-04-20T05:08:55.295+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'spacex_ml_training_pipeline', 'train_model', 'manual__2025-04-20T05:08:54.228404+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/spacex_training_dag.py', '--cfg-path', '/tmp/tmp9s9dor_3']
+[2025-04-20T05:08:55.297+0000] {standard_task_runner.py:85} INFO - Job 3: Subtask train_model
+[2025-04-20T05:08:55.311+0000] {logging_mixin.py:151} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-04-20T05:08:55.349+0000] {task_command.py:415} INFO - Running <TaskInstance: spacex_ml_training_pipeline.train_model manual__2025-04-20T05:08:54.228404+00:00 [running]> on host 9446f58958a4
+[2025-04-20T05:08:55.422+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='gaurav' AIRFLOW_CTX_DAG_ID='spacex_ml_training_pipeline' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2025-04-20T05:08:54.228404+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-20T05:08:54.228404+00:00'
+[2025-04-20T05:08:55.424+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-20T05:08:55.424+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'python /opt/***/project/train.py']
+[2025-04-20T05:08:55.432+0000] {subprocess.py:86} INFO - Output:
+[2025-04-20T05:08:57.763+0000] {subprocess.py:93} INFO - 2025/04/20 05:08:57 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+[2025-04-20T05:08:57.765+0000] {subprocess.py:93} INFO - The git executable must be specified in one of the following ways:
+[2025-04-20T05:08:57.765+0000] {subprocess.py:93} INFO -     - be included in your $PATH
+[2025-04-20T05:08:57.765+0000] {subprocess.py:93} INFO -     - be set via $GIT_PYTHON_GIT_EXECUTABLE
+[2025-04-20T05:08:57.765+0000] {subprocess.py:93} INFO -     - explicitly set via git.refresh(<full-path-to-git-executable>)
+[2025-04-20T05:08:57.765+0000] {subprocess.py:93} INFO - 
+[2025-04-20T05:08:57.766+0000] {subprocess.py:93} INFO - All git commands will error until this is rectified.
+[2025-04-20T05:08:57.766+0000] {subprocess.py:93} INFO - 
+[2025-04-20T05:08:57.766+0000] {subprocess.py:93} INFO - This initial message can be silenced or aggravated in the future by setting the
+[2025-04-20T05:08:57.766+0000] {subprocess.py:93} INFO - $GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+[2025-04-20T05:08:57.767+0000] {subprocess.py:93} INFO -     - quiet|q|silence|s|silent|none|n|0: for no message or exception
+[2025-04-20T05:08:57.767+0000] {subprocess.py:93} INFO -     - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+[2025-04-20T05:08:57.767+0000] {subprocess.py:93} INFO -     - error|e|exception|raise|r|2: for a raised exception
+[2025-04-20T05:08:57.767+0000] {subprocess.py:93} INFO - 
+[2025-04-20T05:08:57.767+0000] {subprocess.py:93} INFO - Example:
+[2025-04-20T05:08:57.768+0000] {subprocess.py:93} INFO -     export GIT_PYTHON_REFRESH=quiet
+[2025-04-20T05:08:57.768+0000] {subprocess.py:93} INFO - 
+[2025-04-20T05:08:59.900+0000] {subprocess.py:93} INFO - 2025/04/20 05:08:59 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.
+[2025-04-20T05:08:59.913+0000] {subprocess.py:93} INFO - Training LogisticRegression...
+[2025-04-20T05:08:59.916+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-04-20T05:08:59.921+0000] {subprocess.py:93} INFO -   File "/opt/***/project/train.py", line 63, in <module>
+[2025-04-20T05:08:59.924+0000] {subprocess.py:93} INFO -     mlflow.sklearn.log_model(clf.best_estimator_, "model")
+[2025-04-20T05:08:59.925+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/mlflow/sklearn/__init__.py", line 413, in log_model
+[2025-04-20T05:08:59.925+0000] {subprocess.py:93} INFO -     return Model.log(
+[2025-04-20T05:08:59.925+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/mlflow/models/model.py", line 744, in log
+[2025-04-20T05:08:59.925+0000] {subprocess.py:93} INFO -     mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path, run_id)
+[2025-04-20T05:08:59.926+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/mlflow/tracking/fluent.py", line 1170, in log_artifacts
+[2025-04-20T05:08:59.926+0000] {subprocess.py:93} INFO -     MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+[2025-04-20T05:08:59.926+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/mlflow/tracking/client.py", line 1977, in log_artifacts
+[2025-04-20T05:08:59.926+0000] {subprocess.py:93} INFO -     self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+[2025-04-20T05:08:59.926+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/mlflow/tracking/_tracking_service/client.py", line 874, in log_artifacts
+[2025-04-20T05:08:59.926+0000] {subprocess.py:93} INFO -     self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+[2025-04-20T05:08:59.926+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/mlflow/store/artifact/local_artifact_repo.py", line 66, in log_artifacts
+[2025-04-20T05:08:59.926+0000] {subprocess.py:93} INFO -     mkdir(artifact_dir)
+[2025-04-20T05:08:59.927+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/mlflow/utils/file_utils.py", line 211, in mkdir
+[2025-04-20T05:08:59.927+0000] {subprocess.py:93} INFO -     raise e
+[2025-04-20T05:08:59.927+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.8/site-packages/mlflow/utils/file_utils.py", line 208, in mkdir
+[2025-04-20T05:08:59.927+0000] {subprocess.py:93} INFO -     os.makedirs(target, exist_ok=True)
+[2025-04-20T05:08:59.927+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/os.py", line 213, in makedirs
+[2025-04-20T05:08:59.927+0000] {subprocess.py:93} INFO -     makedirs(head, exist_ok=exist_ok)
+[2025-04-20T05:08:59.927+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/os.py", line 213, in makedirs
+[2025-04-20T05:08:59.927+0000] {subprocess.py:93} INFO -     makedirs(head, exist_ok=exist_ok)
+[2025-04-20T05:08:59.927+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/os.py", line 213, in makedirs
+[2025-04-20T05:08:59.927+0000] {subprocess.py:93} INFO -     makedirs(head, exist_ok=exist_ok)
+[2025-04-20T05:08:59.927+0000] {subprocess.py:93} INFO -   [Previous line repeated 5 more times]
+[2025-04-20T05:08:59.928+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.8/os.py", line 223, in makedirs
+[2025-04-20T05:08:59.928+0000] {subprocess.py:93} INFO -     mkdir(name, mode)
+[2025-04-20T05:08:59.928+0000] {subprocess.py:93} INFO - PermissionError: [Errno 13] Permission denied: '/Users'
+[2025-04-20T05:09:00.185+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-04-20T05:09:00.194+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-04-20T05:09:00.197+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=spacex_ml_training_pipeline, task_id=train_model, execution_date=20250420T050854, start_date=20250420T050855, end_date=20250420T050900
+[2025-04-20T05:09:00.207+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 3 for task train_model (Bash command failed. The command returned a non-zero exit code 1.; 201)
+[2025-04-20T05:09:00.233+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-04-20T05:09:00.247+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
