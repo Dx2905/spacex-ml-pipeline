@@ -1,0 +1,15 @@
+artifact_uri: file:///opt/airflow/project/mlruns/708727843638959108/34b821d9b3ce4c17897f333d5aa2a949/artifacts
+end_time: 1745126231835
+entry_point_name: ''
+experiment_id: '708727843638959108'
+lifecycle_stage: active
+run_id: 34b821d9b3ce4c17897f333d5aa2a949
+run_name: SVM
+run_uuid: 34b821d9b3ce4c17897f333d5aa2a949
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745126228683
+status: 3
+tags: []
+user_id: airflow

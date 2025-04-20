@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+mlruns/
+venv/
+.env
+airflow.db
+.DS_Store
+
+

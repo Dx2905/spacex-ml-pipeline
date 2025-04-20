@@ -1,0 +1,15 @@
+artifact_uri: file:///opt/airflow/project/mlruns/708727843638959108/5a78a012a7a249c7b71daff4693a2d8a/artifacts
+end_time: 1745126239244
+entry_point_name: ''
+experiment_id: '708727843638959108'
+lifecycle_stage: active
+run_id: 5a78a012a7a249c7b71daff4693a2d8a
+run_name: KNN
+run_uuid: 5a78a012a7a249c7b71daff4693a2d8a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745126235941
+status: 3
+tags: []
+user_id: airflow

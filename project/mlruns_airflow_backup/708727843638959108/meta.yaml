@@ -1,0 +1,6 @@
+artifact_location: file:///opt/airflow/project/mlruns/708727843638959108
+creation_time: 1745126225554
+experiment_id: '708727843638959108'
+last_update_time: 1745126225554
+lifecycle_stage: active
+name: SpaceX Landing Prediction
